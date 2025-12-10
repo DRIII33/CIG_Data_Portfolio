@@ -1,0 +1,15 @@
+Table,Column_Name,Data_Type,Description
+cig_server_logs,log_id,STRING,Unique identifier for each server telemetry log entry.
+cig_server_logs,timestamp,TIMESTAMP,UTC timestamp of when the telemetry data was captured (5-minute intervals).
+cig_server_logs,shard_id,STRING,"Regional server instance identifier (e.g., shard_us_east_1)."
+cig_server_logs,config_version,STRING,"The Server Meshing configuration version running on the shard (e.g., Static_Mesh_V1)."
+cig_server_logs,player_count,INTEGER,Number of concurrent players connected to the shard at the time of logging.
+cig_server_logs,server_fps,FLOAT,"Server Frames Per Second. KPI for ""Game Stability"". Target > 20, Critical < 5."
+cig_server_logs,interaction_delay_ms,FLOAT,"Average latency in milliseconds for player interactions (e.g., opening doors, inventory)."
+cig_server_logs,is_server_crash,INTEGER,"Binary flag (1 = Crash, 0 = Stable). Indicates if a 30k error/server crash occurred."
+cig_pledge_sales,transaction_id,STRING,Unique identifier for the pledge transaction.
+cig_pledge_sales,account_id,INTEGER,Anonymized identifier for the user account making the pledge.
+cig_pledge_sales,timestamp,TIMESTAMP,UTC timestamp of when the transaction was processed.
+cig_pledge_sales,sku_name,STRING,"Name of the digital item/ship pledged for (e.g., RSI Polaris)."
+cig_pledge_sales,pledge_amount_usd,INTEGER,The USD value of the transaction.
+cig_pledge_sales,payment_status,STRING,"Current status of the payment (e.g., COMPLETED)."
